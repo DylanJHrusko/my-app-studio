@@ -20,13 +20,13 @@ Accuracy approval is not proof of understanding. Label simulated trials explicit
 
 ## APP-002
 
-- Prediction: Pending.
-- Check interpretation: Pending.
-- Browser observation: Pending.
-- Keep decision: Pending.
-- Review: Pending.
-- Help/gaps: Pending.
-- Evidence links / next step: Keep APP-001 before agreeing this lesson.
+- Prediction: before login: "You need to get hit with a login page that is a separate page blocking access to anything else". After login: "The dashboard with all the items they wanted to access. But it shouldn't be logged in forever it should auto log you out after you have access what you need and closed it, making you login again"
+- Check interpretation: about the test that copies the login cookie, refuses a GET logout, logs out, then replays the copied cookie (401): "Unauthorized access. Key stealing. It does not prove that you cannot mess with the original login."
+- Browser observation: after signing up, logging in, logging out and revisiting the dashboard with my own throwaway account: "It doesn't even load dashboard it won't let you get anywhere near it. I just noticed how quick it works it feels very secure"
+- Keep decision: "I think keep it as is. I think the sessions are handled correctly"
+- Review: I reviewed and approved these APP-002 excerpts as accurate on November 3, 2026, before commit. Approval confirms accuracy, not understanding.
+- Help/gaps: the coach asked a follow-up for the after-login half of my prediction. After my prediction it explained that sessions expire after 15 minutes and that closing a browser alone cannot reliably end a session. After my check interpretation it noted that separate tests cover password guessing and that these tests run locally. After giving my keep reason I asked for the coach's opinion; it agreed and named limits (local development only; placeholder dashboard). The coach proposed the account plan, which I approved, and found and fixed a signup form that cleared a valid username after a password error.
+- Evidence links / next step: [SPEC.md](SPEC.md#app-002--signup-login-and-logout), [issue #3](https://github.com/DylanJHrusko/my-app-studio/issues/3), [PR #4](https://github.com/DylanJHrusko/my-app-studio/pull/4) with passing `check` and `windows` CI.
 
 ## APP-003
 
