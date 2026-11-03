@@ -26,7 +26,7 @@ Accuracy approval is not proof of understanding. Label simulated trials explicit
 - Keep decision: "I think keep it as is. I think the sessions are handled correctly"
 - Review: I reviewed and approved these APP-002 excerpts as accurate on November 3, 2026, before commit. Approval confirms accuracy, not understanding.
 - Help/gaps: the coach asked a follow-up for the after-login half of my prediction. After my prediction it explained that sessions expire after 15 minutes and that closing a browser alone cannot reliably end a session. After my check interpretation it noted that separate tests cover password guessing and that these tests run locally. After giving my keep reason I asked for the coach's opinion; it agreed and named limits (local development only; placeholder dashboard). The coach proposed the account plan, which I approved, and found and fixed a signup form that cleared a valid username after a password error.
-- Evidence links / next step: [SPEC.md](SPEC.md#app-002--signup-login-and-logout), [issue #3](https://github.com/DylanJHrusko/my-app-studio/issues/3); PR and CI pending.
+- Evidence links / next step: [SPEC.md](SPEC.md#app-002--signup-login-and-logout), [issue #3](https://github.com/DylanJHrusko/my-app-studio/issues/3), [PR #4](https://github.com/DylanJHrusko/my-app-studio/pull/4) with passing `check` and `windows` CI.
 
 ## APP-003
 
