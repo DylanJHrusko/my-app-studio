@@ -7,8 +7,8 @@ actual evidence; pending is a valid state. Keep explanations/help in
 ## Current stage
 
 - **Current feature:** APP-001.
-- **Status:** APP-001 implemented and checked locally; learner contributions recorded and reviewed; PR pending.
-- **Next step:** Learner reviews LEARNING excerpts, then commit, PR and CI for APP-001.
+- **Status:** APP-001 implemented and checked locally; learner contributions recorded and reviewed; PR #2 CI passed.
+- **Next step:** Merge PR #2 (closes issue #1), then agree APP-002.
 - **Implementation marker:** `studio.json` is `implemented_through: 1` (set after the APP-001 contracts passed).
 
 This repository owns application code. Server/proxy changes and production
@@ -81,7 +81,7 @@ customer research or claims that a timestamp proves learning.
 
 | Feature | Files / own issue / PR | Actual checks and learner observations | Kept / GitHub state |
 |---|---|---|---|
-| APP-001 | `app/brand.json`, `app/static/logo.svg`, `app/static/site.css`, `app/templates/home.html`, `app/templates/base.html`, `studio.json` · [issue #1](https://github.com/DylanJHrusko/my-app-studio/issues/1) | `check --lesson APP-001` and full `check` passed locally on Nov 3, 2026 (Black, Pylint, 98 foundation tests, 2 APP-001 contracts, 2 Chromium journeys). AI review: desktop and 390px layouts without horizontal scroll, Skip-link first in tab order, contrast ≥ 6.7:1 for all text pairs. Learner contributions in [LEARNING.md](LEARNING.md#app-001) | Kept by learner; PR pending |
+| APP-001 | `app/brand.json`, `app/static/logo.svg`, `app/static/site.css`, `app/templates/home.html`, `app/templates/base.html`, `studio.json` · [issue #1](https://github.com/DylanJHrusko/my-app-studio/issues/1) | `check --lesson APP-001` and full `check` passed locally on Nov 3, 2026 (Black, Pylint, 98 foundation tests, 2 APP-001 contracts, 2 Chromium journeys). AI review: desktop and 390px layouts without horizontal scroll, Skip-link first in tab order, contrast ≥ 6.7:1 for all text pairs. Learner contributions in [LEARNING.md](LEARNING.md#app-001) | Kept by learner · [PR #2](https://github.com/DylanJHrusko/my-app-studio/pull/2) · CI `check` + `windows` passed ([run 41697660206](https://github.com/DylanJHrusko/my-app-studio/actions/runs/41697660206)) · merge closes issue #1 |
 | APP-002 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 | APP-003 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 

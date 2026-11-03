@@ -16,7 +16,7 @@ Accuracy approval is not proof of understanding. Label simulated trials explicit
 - Keep decision: "keep the homepage". Reason: "The big headline, gold trace, and the colors help guide my eyes and interest in the webpage. It "flows" well"
 - Review: I reviewed and approved these APP-001 excerpts as accurate on November 3, 2026, before commit. Approval confirms accuracy, not understanding.
 - Help/gaps: the coach offered two example archetypes (Sage, Explorer) and an example promise; I chose Explorer and wrote my own promise. The coach asked once for the archetype reason and once for the keep reason, with a hint. After my check interpretation, the coach noted that this test reads page text/HTML only and does not check alignment or appearance; that layout was reviewed separately by screenshots. The coach proposed the headline and page copy, which I approved.
-- Evidence links / next step: [SPEC.md](SPEC.md#app-001--branded-homepage), [issue #1](https://github.com/DylanJHrusko/my-app-studio/issues/1); PR and CI pending.
+- Evidence links / next step: [SPEC.md](SPEC.md#app-001--branded-homepage), [issue #1](https://github.com/DylanJHrusko/my-app-studio/issues/1), [PR #2](https://github.com/DylanJHrusko/my-app-studio/pull/2) with passing `check` and `windows` CI.
 
 ## APP-002
 
