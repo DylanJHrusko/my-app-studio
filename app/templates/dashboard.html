@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Member space · {{ brand.name }}{% endblock %}
+{% block content %}
+<section class="hero" aria-labelledby="dashboard-title">
+  <p class="eyebrow">Signed in as {{ user.username }} · {{ user.role }}</p>
+  <h1 id="dashboard-title">Your member space</h1>
+  <p class="lede">Welcome back, {{ user.username }}. This private page is served only while your session is active on the server.</p>
+</section>
+<section class="panel" aria-labelledby="notes-title">
+  <p class="eyebrow">Your notes</p>
+  <h2 id="notes-title">Saved networking notes will appear here.</h2>
+  <p>There are no notes yet; publishing and saving notes is a later feature. Your session ends after 15 minutes, or now with Log out.</p>
+  <form method="post" action="/logout">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <button class="button" type="submit">Log out</button>
+  </form>
+</section>
+{% endblock %}
