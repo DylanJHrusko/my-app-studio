@@ -7,9 +7,9 @@ actual evidence; pending is a valid state. Keep explanations/help in
 ## Current stage
 
 - **Current feature:** APP-001.
-- **Status:** Neutral foundation; learner scope and decisions pending.
-- **Next step:** Confirm the local clone and SSH origin, run setup and try the page.
-- **Implementation marker:** `studio.json` starts at `implemented_through: 0`.
+- **Status:** APP-001 implemented and checked locally; learner contributions recorded and reviewed; PR pending.
+- **Next step:** Learner reviews LEARNING excerpts, then commit, PR and CI for APP-001.
+- **Implementation marker:** `studio.json` is `implemented_through: 1` (set after the APP-001 contracts passed).
 
 This repository owns application code. Server/proxy changes and production
 deployment are outside these three local-development lessons. Prepared helpers
@@ -23,10 +23,10 @@ Keep account actions honest about their unfinished state.
 
 | Decision | Agreement |
 |---|---|
-| Visitor and concrete use situation | Pending |
-| Reused IS117 brand, or name / promise / primary archetype | Pending |
-| One visible choice and visitor benefit | Pending |
-| Own issue / branch / PR | Pending |
+| Visitor and concrete use situation | A person interested in network engineering who wants to discover new network advances |
+| Reused IS117 brand, or name / promise / primary archetype | New brand: **Network Notes** · promise "Concise, Clear, and Consistent Networking News" · primary archetype **Explorer** (chosen by learner; reason in LEARNING.md) |
+| One visible choice and visitor benefit | Colors: dark server-room navy, blue-green server hues and gold circuit-trace accents (learner's prediction in LEARNING.md) |
+| Own issue / branch / PR | [Issue #1](https://github.com/DylanJHrusko/my-app-studio/issues/1) · branch `app-001-homepage` · PR pending |
 
 **Keep when:** the agreed identity is visible and usable at desktop/narrow widths;
 full foundation + APP-001 checks pass; AI review and the learner's actual check
@@ -81,7 +81,7 @@ customer research or claims that a timestamp proves learning.
 
 | Feature | Files / own issue / PR | Actual checks and learner observations | Kept / GitHub state |
 |---|---|---|---|
-| APP-001 | Pending | Not run; learner contributions pending | Pending |
+| APP-001 | `app/brand.json`, `app/static/logo.svg`, `app/static/site.css`, `app/templates/home.html`, `app/templates/base.html`, `studio.json` · [issue #1](https://github.com/DylanJHrusko/my-app-studio/issues/1) | `check --lesson APP-001` and full `check` passed locally on Nov 3, 2026 (Black, Pylint, 98 foundation tests, 2 APP-001 contracts, 2 Chromium journeys). AI review: desktop and 390px layouts without horizontal scroll, Skip-link first in tab order, contrast ≥ 6.7:1 for all text pairs. Learner contributions in [LEARNING.md](LEARNING.md#app-001) | Kept by learner; PR pending |
 | APP-002 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 | APP-003 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 

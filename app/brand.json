@@ -1,16 +1,16 @@
 {
-  "name": "Your Project",
-  "audience": "Not chosen yet",
-  "archetype": "Not chosen yet",
-  "promise": "Not chosen yet",
-  "headline": "A small idea. A real application.",
-  "summary": "This working page is your starting point. Give it a purpose and a brand, then build accounts and permissions one feature at a time.",
-  "voice": ["Not chosen yet"],
-  "design_direction": "Not chosen yet",
+  "name": "Network Notes",
+  "audience": "A person interested in network engineering who wants to discover new network advances",
+  "archetype": "Explorer",
+  "promise": "Concise, Clear, and Consistent Networking News",
+  "headline": "Explore what’s next in networking.",
+  "summary": "Network Notes is a home for short, readable notes on new networking advances, so you can follow what’s changing without wading through noise.",
+  "voice": ["Curious", "Clear", "Concise"],
+  "design_direction": "Dark server-room navy with blue-green server hues and gold circuit-trace accents",
   "palette": {
-    "ink": "#182C34",
-    "paper": "#F6F5EF",
-    "accent": "#285A50",
-    "surface": "#FFFFFF"
+    "ink": "#E6F0F2",
+    "paper": "#0B1A24",
+    "accent": "#D9AE3B",
+    "surface": "#12303A"
   }
 }
