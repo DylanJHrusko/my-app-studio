@@ -6,10 +6,10 @@ actual evidence; pending is a valid state. Keep explanations/help in
 
 ## Current stage
 
-- **Current feature:** APP-002.
-- **Status:** APP-001 kept and merged. APP-002 implemented and checked locally; learner contributions recorded and reviewed; PR #4 CI passed.
-- **Next step:** Merge PR #4 (closes issue #3), then agree APP-003.
-- **Implementation marker:** `studio.json` is `implemented_through: 2` (set after the APP-002 contracts passed).
+- **Current feature:** APP-003.
+- **Status:** APP-001 and APP-002 kept and merged. APP-003 implemented and checked locally; learner contributions recorded and reviewed; PR pending.
+- **Next step:** Open the APP-003 PR and wait for `check` and `windows` CI.
+- **Implementation marker:** `studio.json` is `implemented_through: 3` (set after the APP-003 contracts passed).
 
 This repository owns application code. Server/proxy changes and production
 deployment are outside these three local-development lessons. Prepared helpers
@@ -65,9 +65,9 @@ permissions, including for an existing session after a role change.
 
 | Decision | Agreement |
 |---|---|
-| Intended admin-only result | Pending |
-| Actual allowed/denied request evidence | Pending |
-| Own issue / branch / PR | Pending |
+| Intended admin-only result | The admin area lists every account's username and current role (learner chose the account list over a counts overview). No hashes, IDs or session data; no role changes from the web. |
+| Actual allowed/denied request evidence | Anonymous: `/api/admin` 401, `/admin` → Log in. Member: `/api/admin` 403, `/admin` 403 "Admin access required", no Admin nav link. Admin via trusted `studio.py user role`: 200 and "Administration" with the account table, in the same session; demotion returns the same session to 403. A forged `role` claim in a re-signed token is ignored (contract test). |
+| Own issue / branch / PR | [Issue #5](https://github.com/DylanJHrusko/my-app-studio/issues/5) · branch `app-003-roles` · PR pending |
 
 **Keep when:** a direct request cannot bypass the role boundary, role changes
 take effect as specified, new signup remains member-only, and full cumulative
@@ -83,7 +83,7 @@ customer research or claims that a timestamp proves learning.
 |---|---|---|---|
 | APP-001 | `app/brand.json`, `app/static/logo.svg`, `app/static/site.css`, `app/templates/home.html`, `app/templates/base.html`, `studio.json` · [issue #1](https://github.com/DylanJHrusko/my-app-studio/issues/1) | `check --lesson APP-001` and full `check` passed locally on Nov 3, 2026 (Black, Pylint, 98 foundation tests, 2 APP-001 contracts, 2 Chromium journeys). AI review: desktop and 390px layouts without horizontal scroll, Skip-link first in tab order, contrast ≥ 6.7:1 for all text pairs. Learner contributions in [LEARNING.md](LEARNING.md#app-001) | Kept by learner · [PR #2](https://github.com/DylanJHrusko/my-app-studio/pull/2) · CI `check` + `windows` passed ([run 41697660206](https://github.com/DylanJHrusko/my-app-studio/actions/runs/41697660206)) · merge closes issue #1 |
 | APP-002 | `app/features/accounts.py`, `app/templates/signup.html`, `login.html`, `dashboard.html`, `tests/test_signup_form.py`, `studio.json` · [issue #3](https://github.com/DylanJHrusko/my-app-studio/issues/3) | `check --lesson APP-002` and full `check` passed locally on Nov 3, 2026 (Black, Pylint, 100 foundation/added tests, 14 contracts through APP-002, 2 Chromium journeys). AI review on a throwaway database: anonymous dashboard → Log in; short password keeps only a valid username; wrong password generic error; logout → `/api/me` 401; 390px layout without horizontal scroll; no password in the server log. Learner contributions in [LEARNING.md](LEARNING.md#app-002) | Kept by learner · [PR #4](https://github.com/DylanJHrusko/my-app-studio/pull/4) · CI `check` + `windows` passed ([run 41701034307](https://github.com/DylanJHrusko/my-app-studio/actions/runs/41701034307)) · merge closes issue #3 |
-| APP-003 | Pending | Unfinished; explicit contracts not yet passed | Pending |
+| APP-003 | `app/features/roles.py`, `app/templates/admin.html`, `app/static/site.css`, `tests/test_admin_accounts.py`, `studio.json` · [issue #5](https://github.com/DylanJHrusko/my-app-studio/issues/5) | `check --lesson APP-003` and full `check` passed locally on Nov 3, 2026 (Black, Pylint, 101 foundation/added tests, 18 contracts, 2 Chromium journeys). AI review on a throwaway database confirmed the permission matrix, role change in an existing session, and 390px layout. Learner contributions in [LEARNING.md](LEARNING.md#app-003) | Kept by learner; PR pending |
 
 The instructor's reference branches show possible implementations. They do not
 establish this repository's completion or the learner's own reasoning.

@@ -13,3 +13,6 @@ h1{color:var(--ink)}h1 em{font-style:normal;color:var(--accent)}
 .tag-list li{padding:4px 12px;border:1px solid color-mix(in srgb,var(--accent) 60%,transparent);border-radius:999px;font-size:.85rem}
 .error,[role=alert]{color:#FF9B8F}
 @media(max-width:650px){.hero{padding-left:18px}.hero::before{top:60px}.hero::after{bottom:60px}}
+.accounts{width:100%;border-collapse:collapse;margin-top:12px}
+.accounts th,.accounts td{text-align:left;padding:10px 12px;border-bottom:1px solid color-mix(in srgb,var(--server-green) 25%,transparent);overflow-wrap:anywhere}
+.accounts th{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--server-green)}
