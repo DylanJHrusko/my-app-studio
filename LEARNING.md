@@ -30,10 +30,11 @@ Accuracy approval is not proof of understanding. Label simulated trials explicit
 
 ## APP-003
 
-- Prediction: Pending.
-- Check interpretation: Pending.
-- Browser observation: Pending.
-- Keep decision: Pending.
-- Review: Pending.
-- Help/gaps: Pending.
-- Evidence links / next step: Keep APP-002 before agreeing this lesson.
+- Decision: the admin area shows the account list (usernames and roles), chosen over a counts overview.
+- Prediction: "Well it would do the same thing as not being logged in basically. it would reroute back to the dashboard of the not admin."
+- Check interpretation: about the test where a logged-in member directly requests `/api/admin` and `/admin` and must get 403: "This test proves that you need to answer you may not instead of who are you. IE it says 403 as in forbidden. Hiding would not be secure."
+- Browser observation: after trying `/admin` as a member, running the trusted role command on my own throwaway account and refreshing: "It took a minute to update but once it did I noticed the member just gets the normal view and admin now has a dashboard to look at different users."
+- Keep decision: "Keep all as it is because everything is working properly and correctly (so i think)"
+- Review: I reviewed and approved these APP-003 excerpts as accurate on November 3, 2026, before commit. Approval confirms accuracy, not understanding.
+- Help/gaps: my prediction differed from the agreed behavior: the coach's plan explained that a member gets 403 ("you may not") rather than the logged-out 401 or a redirect, and named authentication versus authorization. My check interpretation uses that wording after seeing the plan. The coach explained that a role change shows on the next request, so an open page needs a refresh. The coach offered two admin-area options, proposed the plan, which I approved, and added a test that the list exposes only usernames and roles.
+- Evidence links / next step: [SPEC.md](SPEC.md#app-003--server-enforced-roles), [issue #5](https://github.com/DylanJHrusko/my-app-studio/issues/5), [PR #6](https://github.com/DylanJHrusko/my-app-studio/pull/6) with passing `check` and `windows` CI.

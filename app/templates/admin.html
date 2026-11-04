@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Administration · {{ brand.name }}{% endblock %}
+{% block content %}
+{% if allowed %}
+<section class="hero" aria-labelledby="admin-title">
+  <p class="eyebrow">Signed in as {{ user.username }} · admin</p>
+  <h1 id="admin-title">Administration</h1>
+  <p class="lede">Every Network Notes account and its current role. Roles change only through the trusted local command, never from this page.</p>
+</section>
+<section class="panel" aria-labelledby="accounts-title">
+  <h2 id="accounts-title">Accounts ({{ accounts | length }})</h2>
+  <table class="accounts">
+    <thead><tr><th scope="col">Username</th><th scope="col">Role</th></tr></thead>
+    <tbody>{% for account in accounts %}<tr><td>{{ account.username }}</td><td>{{ account.role }}</td></tr>{% endfor %}</tbody>
+  </table>
+</section>
+{% else %}
+<section class="form-stack" aria-labelledby="denied-title">
+  <p class="eyebrow">Signed in as {{ user.username }} · {{ user.role }}</p>
+  <h1 id="denied-title">Admin access required</h1>
+  <p role="alert">Your account is logged in, but it is not allowed to view the administration area.</p>
+  <p><a class="text-link" href="/dashboard">Back to your member space</a></p>
+</section>
+{% endif %}
+{% endblock %}
